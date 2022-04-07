@@ -15,5 +15,7 @@ int main (int argc, char* argv[]) {
     // CustomizedWidget widget;
     // widget.print();
     // widget.show();
+
+    system("pause");
     return 0;
 }
