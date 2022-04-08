@@ -4,8 +4,10 @@
 
 cd ./build
 
-conan install .. -s build_type=Release --build=missing
+conan install .. -s build_type=Debug --build=missing
 
 cmake .. -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake
 
-cmake --build . --config Release
+cmake --build . --config Debug
+
+$SHELL
