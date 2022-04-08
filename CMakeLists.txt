@@ -5,15 +5,12 @@ project(CMakeConanTest LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CONFIGURATION_TYPES "Release;RelWithDebInfo;Debug" CACHE STRING "" FORCE)
-
-find_package(nlohmann_json)
-find_package(Qt6)
-
+set(CMAKE_PREFIX_PATH CONAN_CMAKE_MODULE_PATH)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
-#include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
-#conan_basic_setup()
+find_package(nlohmann_json)
+find_package(Qt6 REQUIRED COMPONENTS Widgets)
 
 add_subdirectory(lib)
 

@@ -1,6 +1,7 @@
 #include "Adder.h"
 #include <nlohmann/json.hpp>
-// #include "CustomizedWidget.h"
+#include <QApplication>
+#include "CustomizedWidget.h"
 #include <iostream>
 
 int main (int argc, char* argv[]) {
@@ -12,10 +13,10 @@ int main (int argc, char* argv[]) {
     j["text"] = "hello world";
 
     std::cout << j.dump() << std::endl;
-    // CustomizedWidget widget;
-    // widget.print();
-    // widget.show();
 
-    system("pause");
-    return 0;
+    QApplication app(argc, argv);
+    CustomizedWidget widget;
+    widget.print();
+    widget.show();
+    return app.exec();
 }
