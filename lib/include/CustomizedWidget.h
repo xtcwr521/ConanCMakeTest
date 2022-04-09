@@ -6,7 +6,7 @@ class CustomizedWidget : public QWidget {
 public:
     explicit CustomizedWidget(QWidget* parent = nullptr);
     void print();
-	
+
 signals:
     void printSignal();
 };
